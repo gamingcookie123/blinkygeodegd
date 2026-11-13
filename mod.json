@@ -1,0 +1,72 @@
+{
+    "geode": "4.0.0",
+    "gd": {
+        "win": "2.2081"
+    },
+    "id": "joel.blinky",
+    "name": "Blinky",
+    "version": "1.0.0",
+    "developer": "joel",
+    "description": "A GeoGuessr-style minigame for Geometry Dash. See a random level fragment, identify the level, find the exact location!",
+    "links": {
+        "homepage": "https://github.com/joel/blinky"
+    },
+    "settings": {
+        "flash-duration-ms": {
+            "name": "Flash Duration (ms)",
+            "description": "How long the fragment is shown. Minimum is one frame (~16ms).",
+            "type": "int",
+            "default": 50,
+            "min": 17,
+            "max": 5000
+        },
+        "fragment-width-blocks": {
+            "name": "Fragment Width (blocks)",
+            "description": "Width of the shown fragment in blocks.",
+            "type": "int",
+            "default": 16,
+            "min": 8,
+            "max": 32
+        },
+        "fragment-height-blocks": {
+            "name": "Fragment Height (blocks)",
+            "description": "Height of the shown fragment in blocks.",
+            "type": "int",
+            "default": 10,
+            "min": 6,
+            "max": 20
+        },
+        "sound-effects": {
+            "name": "Sound Effects",
+            "description": "Enable sound effects.",
+            "type": "bool",
+            "default": true
+        },
+        "difficulty": {
+            "name": "Difficulty",
+            "description": "Easy = longer flash. Normal = standard. Hard = very short flash.",
+            "type": "string",
+            "default": "Normal",
+            "one-of": ["Easy", "Normal", "Hard"]
+        },
+        "include-main-levels": {
+            "name": "Include Main Levels",
+            "description": "Include the 22 main RobTop levels.",
+            "type": "bool",
+            "default": true
+        },
+        "include-tower-levels": {
+            "name": "Include Tower/Secret Levels",
+            "description": "Include The Tower, Sewers, Cellar, etc.",
+            "type": "bool",
+            "default": true
+        },
+        "wrong-level-penalty": {
+            "name": "Wrong Level Penalty",
+            "description": "Add extra penalty points for selecting the wrong level.",
+            "type": "bool",
+            "default": false
+        }
+    },
+    "tags": ["gameplay", "minigame", "fun"]
+}
